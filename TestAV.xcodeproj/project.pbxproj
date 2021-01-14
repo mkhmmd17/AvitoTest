@@ -13,6 +13,8 @@
 		DB08137325B0D52500DA5AB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB08137125B0D52500DA5AB4 /* Main.storyboard */; };
 		DB08137525B0D52700DA5AB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB08137425B0D52700DA5AB4 /* Assets.xcassets */; };
 		DB08137825B0D52700DA5AB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB08137625B0D52700DA5AB4 /* LaunchScreen.storyboard */; };
+		DB08138125B0D64300DA5AB4 /* result.json in Resources */ = {isa = PBXBuildFile; fileRef = DB08138025B0D64300DA5AB4 /* result.json */; };
+		DB08138425B0D67000DA5AB4 /* MainStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08138325B0D67000DA5AB4 /* MainStruct.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		DB08137425B0D52700DA5AB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB08137725B0D52700DA5AB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB08137925B0D52700DA5AB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB08138025B0D64300DA5AB4 /* result.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = result.json; sourceTree = "<group>"; };
+		DB08138325B0D67000DA5AB4 /* MainStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStruct.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +64,9 @@
 				DB08136D25B0D52500DA5AB4 /* SceneDelegate.swift */,
 				DB08136F25B0D52500DA5AB4 /* ViewController.swift */,
 				DB08137125B0D52500DA5AB4 /* Main.storyboard */,
+				DB08138325B0D67000DA5AB4 /* MainStruct.swift */,
 				DB08137425B0D52700DA5AB4 /* Assets.xcassets */,
+				DB08138025B0D64300DA5AB4 /* result.json */,
 				DB08137625B0D52700DA5AB4 /* LaunchScreen.storyboard */,
 				DB08137925B0D52700DA5AB4 /* Info.plist */,
 			);
@@ -126,6 +132,7 @@
 			files = (
 				DB08137825B0D52700DA5AB4 /* LaunchScreen.storyboard in Resources */,
 				DB08137525B0D52700DA5AB4 /* Assets.xcassets in Resources */,
+				DB08138125B0D64300DA5AB4 /* result.json in Resources */,
 				DB08137325B0D52500DA5AB4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB08137025B0D52500DA5AB4 /* ViewController.swift in Sources */,
+				DB08138425B0D67000DA5AB4 /* MainStruct.swift in Sources */,
 				DB08136C25B0D52500DA5AB4 /* AppDelegate.swift in Sources */,
 				DB08136E25B0D52500DA5AB4 /* SceneDelegate.swift in Sources */,
 			);
@@ -296,7 +304,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Gelogaev.TestAV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -315,7 +323,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Gelogaev.TestAV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
