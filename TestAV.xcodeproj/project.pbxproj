@@ -15,6 +15,10 @@
 		DB08137825B0D52700DA5AB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB08137625B0D52700DA5AB4 /* LaunchScreen.storyboard */; };
 		DB08138125B0D64300DA5AB4 /* result.json in Resources */ = {isa = PBXBuildFile; fileRef = DB08138025B0D64300DA5AB4 /* result.json */; };
 		DB08138425B0D67000DA5AB4 /* MainStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08138325B0D67000DA5AB4 /* MainStruct.swift */; };
+		DB08138B25B1750F00DA5AB4 /* ServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08138925B1750F00DA5AB4 /* ServiceCell.swift */; };
+		DB08138C25B1750F00DA5AB4 /* ServiceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB08138A25B1750F00DA5AB4 /* ServiceCell.xib */; };
+		DB08139025B179BA00DA5AB4 /* UICollectionView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08138F25B179BA00DA5AB4 /* UICollectionView + Extension.swift */; };
+		DB08139725B17B2200DA5AB4 /* ServiceCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08139625B17B2200DA5AB4 /* ServiceCellModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		DB08137925B0D52700DA5AB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB08138025B0D64300DA5AB4 /* result.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = result.json; sourceTree = "<group>"; };
 		DB08138325B0D67000DA5AB4 /* MainStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStruct.swift; sourceTree = "<group>"; };
+		DB08138925B1750F00DA5AB4 /* ServiceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCell.swift; sourceTree = "<group>"; };
+		DB08138A25B1750F00DA5AB4 /* ServiceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceCell.xib; sourceTree = "<group>"; };
+		DB08138F25B179BA00DA5AB4 /* UICollectionView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView + Extension.swift"; sourceTree = "<group>"; };
+		DB08139625B17B2200DA5AB4 /* ServiceCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCellModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +71,9 @@
 				DB08136B25B0D52500DA5AB4 /* AppDelegate.swift */,
 				DB08136D25B0D52500DA5AB4 /* SceneDelegate.swift */,
 				DB08136F25B0D52500DA5AB4 /* ViewController.swift */,
+				DB08138F25B179BA00DA5AB4 /* UICollectionView + Extension.swift */,
 				DB08137125B0D52500DA5AB4 /* Main.storyboard */,
+				DB08139325B17B0300DA5AB4 /* ServiceCell */,
 				DB08138325B0D67000DA5AB4 /* MainStruct.swift */,
 				DB08137425B0D52700DA5AB4 /* Assets.xcassets */,
 				DB08138025B0D64300DA5AB4 /* result.json */,
@@ -71,6 +81,16 @@
 				DB08137925B0D52700DA5AB4 /* Info.plist */,
 			);
 			path = TestAV;
+			sourceTree = "<group>";
+		};
+		DB08139325B17B0300DA5AB4 /* ServiceCell */ = {
+			isa = PBXGroup;
+			children = (
+				DB08138925B1750F00DA5AB4 /* ServiceCell.swift */,
+				DB08138A25B1750F00DA5AB4 /* ServiceCell.xib */,
+				DB08139625B17B2200DA5AB4 /* ServiceCellModel.swift */,
+			);
+			path = ServiceCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,6 +153,7 @@
 				DB08137825B0D52700DA5AB4 /* LaunchScreen.storyboard in Resources */,
 				DB08137525B0D52700DA5AB4 /* Assets.xcassets in Resources */,
 				DB08138125B0D64300DA5AB4 /* result.json in Resources */,
+				DB08138C25B1750F00DA5AB4 /* ServiceCell.xib in Resources */,
 				DB08137325B0D52500DA5AB4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,10 +165,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB08139025B179BA00DA5AB4 /* UICollectionView + Extension.swift in Sources */,
 				DB08137025B0D52500DA5AB4 /* ViewController.swift in Sources */,
 				DB08138425B0D67000DA5AB4 /* MainStruct.swift in Sources */,
+				DB08138B25B1750F00DA5AB4 /* ServiceCell.swift in Sources */,
 				DB08136C25B0D52500DA5AB4 /* AppDelegate.swift in Sources */,
 				DB08136E25B0D52500DA5AB4 /* SceneDelegate.swift in Sources */,
+				DB08139725B17B2200DA5AB4 /* ServiceCellModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
