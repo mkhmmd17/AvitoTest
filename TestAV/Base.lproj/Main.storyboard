@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9GA-ti-5nk">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9GA-ti-5nk">
+                                <rect key="frame" x="0.0" y="207" width="414" height="555"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="j4B-Q3-SVf">
                                     <size key="itemSize" width="128" height="128"/>
@@ -31,9 +31,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9GA-ti-5nk" secondAttribute="bottom" id="EPB-ap-Kwp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9GA-ti-5nk" secondAttribute="bottom" constant="100" id="EPB-ap-Kwp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9GA-ti-5nk" secondAttribute="trailing" id="VHl-0f-k0A"/>
-                            <constraint firstItem="9GA-ti-5nk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="qk0-hY-IXx"/>
+                            <constraint firstItem="9GA-ti-5nk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="163" id="qk0-hY-IXx"/>
                             <constraint firstItem="9GA-ti-5nk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sOV-3j-wbI"/>
                         </constraints>
                     </view>
@@ -43,7 +43,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-146" y="40"/>
+            <point key="canvasLocation" x="-146.37681159420291" y="39.508928571428569"/>
         </scene>
     </scenes>
     <resources>

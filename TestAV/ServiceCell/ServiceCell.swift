@@ -25,6 +25,8 @@ final class ServiceCell: UICollectionViewCell {
         backgroundColor = .lightGray
         layer.cornerRadius = 8
         serviceTextLabel.text = cellModel.serviceText
+        serviceTitleLabel.text = cellModel.serviceTitle
+        servicePriceLabel.text = cellModel.servicePrice
         checkmarkImageView.isHidden = !cellModel.isSelected
     }
     
