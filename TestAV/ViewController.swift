@@ -11,9 +11,16 @@ class ViewController: UIViewController {
     
     typealias Service = List
     
+    
     @IBOutlet private var collectionView: UICollectionView!
+    @IBOutlet weak var mainTitleLabel: UILabel!
+    
+    @IBOutlet weak var selectButton: UIButton!
+    
     var cellModels: [ServiceCellModel] = []
     var services: [Service] = []
+
+  
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,18 +30,25 @@ class ViewController: UIViewController {
         collectionView.delegate = self
         fetchServiceData()
         cellModels = createCellModels(services: services)
+        mainTitleLabel.font = UIFont.boldSystemFont(ofSize: 18)
+    
 
     }
     
     private func createCellModels(services: [Service]) -> [ServiceCellModel] {
-        return services.map {
+        let cellModels = services.map {
             ServiceCellModel(serviceImageURL: URL(string: $0.icon.the52X52),
                              serviceTitle: $0.title,
                              serviceText: $0.listDescription ?? "",
                              servicePrice: $0.price,
-                             isSelected: $0.isSelected)
+                             isSelected: false)
+            
         }
+        cellModels.first?.isSelected = true
+        return cellModels
     }
+    
+  
     
     private func fetchServiceData() {
         let path = Bundle.main.path(forResource: "result", ofType: "json")
@@ -43,8 +57,12 @@ class ViewController: UIViewController {
         do  {
             let data = try Data(contentsOf: url)
             let results = try JSONDecoder().decode(Main.self, from: data)
+            let mainTitle = results.result.title
+            
+
             self.services = results.result.list
-            print (results)
+            self.mainTitleLabel.text = mainTitle
+            
         } catch {
             print(error.localizedDescription)
         }
@@ -71,5 +89,26 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegateFl
                                     attributes: [.font : UIFont.systemFont(ofSize: 16)])
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        cellModels.forEach { $0.isSelected = false }
+        let model = cellModels[indexPath.item]
+        model.isSelected = true
+        collectionView.reloadData()
+    }
+    
+}
+
+extension UIImageView {
+    func load(url: URL) {
+        DispatchQueue.global().async { [weak self] in
+            if let data = try? Data(contentsOf: url) {
+                if let image = UIImage(data: data) {
+                    DispatchQueue.main.async {
+                        self?.image = image
+                    }
+                }
+            }
+        }
+    }
 }
 

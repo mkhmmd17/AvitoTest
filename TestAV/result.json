@@ -24,34 +24,8 @@
         },
         "price": "299 ₽",
         "isSelected": true
-      },
-      {
-        "id": "x10_1",
-        "title": "До 10 раз больше просмотров на 1 день",
-        "icon": {
-          "52x52": "https://www.avito.ru/s/common/components/monetization/icons/apps/vas-x10_1-52.png"
-        },
-        "price": "400 ₽",
-        "isSelected": false
-      },
-      {
-        "id": "x5_1",
-        "title": "До 5 раз больше просмотров на 1 день",
-        "icon": {
-          "52x52": "https://www.avito.ru/s/common/components/monetization/icons/apps/vas-x5_1-52.png"
-        },
-        "price": "230 ₽",
-        "isSelected": false
-      },
-      {
-        "id": "x2_1",
-        "title": "До 2 раз больше просмотров на 1 день",
-        "icon": {
-          "52x52": "https://www.avito.ru/s/common/components/monetization/icons/apps/vas-x2_1-52.png"
-        },
-        "price": "100 ₽",
-        "isSelected": false
       }
+      
     ]
   }
 }
