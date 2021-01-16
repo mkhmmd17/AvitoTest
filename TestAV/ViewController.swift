@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     
     var cellModels: [ServiceCellModel] = []
     var services: [Service] = []
+    var checkBool: [Int] = []
 
   
 
@@ -31,9 +32,49 @@ class ViewController: UIViewController {
         fetchServiceData()
         cellModels = createCellModels(services: services)
         mainTitleLabel.font = UIFont.boldSystemFont(ofSize: 18)
+        
+        selectButton.backgroundColor = .systemBlue
+        selectButton.setTitle("Выбрать", for: .normal)
+        selectButton.layer.cornerRadius = 8
+        selectButton.setTitleColor(.white, for: .normal)
+        
     
 
     }
+    
+    @IBAction func selectBtn(_ sender: Any) {
+        
+        let check = self.checkBool
+        
+        if check == [0] {
+            let alert = UIAlertController(title: "", message: "хотите приобрести пакет XL", preferredStyle: .alert)
+            let okBtn = UIAlertAction(title: "Да", style: .default, handler: nil)
+            let cnclBtn = UIAlertAction(title: "Отмена", style: .cancel, handler: nil)
+            alert.addAction(okBtn)
+            alert.addAction(cnclBtn)
+            
+            present(alert, animated: true, completion: nil)
+            
+        } else if check == [1] {
+            let alert = UIAlertController(title: "", message: "хотите приобрести пакет Выделение", preferredStyle: .alert)
+            let okBtn = UIAlertAction(title: "Да", style: .default, handler: nil)
+            let cnclBtn = UIAlertAction(title: "Отмена", style: .cancel, handler: nil)
+            alert.addAction(okBtn)
+            alert.addAction(cnclBtn)
+            
+            present(alert, animated: true, completion: nil)
+
+        } else {
+            let alert = UIAlertController(title: "", message: "Выберите пакет", preferredStyle: .alert)
+            let okBtn = UIAlertAction(title: "Ок", style: .default, handler: nil)
+            alert.addAction(okBtn)
+            
+            present(alert, animated: true, completion: nil)
+
+        }
+        
+    }
+    
     
     private func createCellModels(services: [Service]) -> [ServiceCellModel] {
         let cellModels = services.map {
@@ -44,7 +85,7 @@ class ViewController: UIViewController {
                              isSelected: false)
             
         }
-        cellModels.first?.isSelected = true
+//        cellModels.first?.isSelected = true
         return cellModels
     }
     
@@ -90,9 +131,17 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegateFl
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
         cellModels.forEach { $0.isSelected = false }
         let model = cellModels[indexPath.item]
-        model.isSelected = true
+        model.isSelected.toggle()
+        print([indexPath.item])
+        self.checkBool = [indexPath.item]
+        
+        
+//        cellModels.forEach { $0.isSelected = false }
+//        let model = cellModels[indexPath.item]
+//        model.isSelected = true
         collectionView.reloadData()
     }
     
